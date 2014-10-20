@@ -13,13 +13,6 @@ var parser = new argparse.ArgumentParser({
 
 parser.addArgument(['source']);
 
-parser.addArgument(
-    [ '-f', '--foo'],
-    {
-        help: 'foo bar'
-    }
-);
-
 var args = parser.parseArgs();
 
 var toJSON = function(ini){
@@ -78,11 +71,3 @@ if(source != undefined){
         }
     })
 }
-
-/*
-request({'url':'https://raw.githubusercontent.com/HackBulgaria/NodeJS-1/master/week0/1-ini-parsing/config.ini'}, function (error, response, body) {
-        fs.writeFile('sloppy_config.json', toJSON(body));
-    });
-
-
-*/
